@@ -3,10 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Weather App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background: #f0f2f5;
+        }
+        .weather-container {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .search-box {
+            margin-bottom: 20px;
+        }
+        input {
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin-right: 5px;
+        }
+        button {
+            padding: 8px 15px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+        .weather-info {
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
-    <h1>my name is asif</h1>
-    
+    <div class="weather-container">
+        <div class="search-box">
+            <input type="text" id="cityInput" placeholder="Enter city name">
+            <button onclick="getWeather()">Search</button>
+        </div>
+        <div class="weather-info">
+            <h2 id="cityName"></h2>
+            <p>Temperature: <span id="temperature"></span>°C</p>
+            <p>Humidity: <span id="humidity"></span>%</p>
+        </div>
+    </div>
+    <script src="app.js"></script>
 </body>
 </html>
